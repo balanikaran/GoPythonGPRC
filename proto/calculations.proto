@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package calculations;
+
+message NumAB {
+    double a = 1;
+    double b = 2;
+}
+
+message ResAB {
+    double ans = 1;
+}
+
+service Calculate {
+    rpc add(NumAB) returns (ResAB);
+    rpc subtract(NumAB) returns (ResAB);
+    rpc multiply(NumAB) returns (ResAB);
+    rpc divide(NumAB) returns (ResAB);
+}
